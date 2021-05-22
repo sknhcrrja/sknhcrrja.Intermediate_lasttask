@@ -25,7 +25,15 @@ $('.js_drawer_icon').on('click', function(e){
   $('#drawer_icon_batu').toggleClass('is_active');
   $('#drawer_contents').toggleClass('is_active');
   $('#drawer_bg').toggleClass('is_active');
-
+  
+  $('.drawer_nav li a').on('click', function(){
+    $('#drawer_contents').removeClass('is_active');
+    $('#drawer_bg').removeClass('is_active');
+    $('#drawer_icon_hamburger').removeClass('is_active');
+    $('#drawer_icon_batu').removeClass('is_active');
+    return false;
+  });
+  return false;
 });
 
 // slick
